@@ -1,0 +1,116 @@
+{
+    "pt": {
+        "header": {
+            "about": "Quem somos",
+            "group": "Grupo LINEAN",
+            "contact": "Contactos",
+            "faq": "FAQ'S",
+            "services": {
+                "construction": "Construção e remodelações",
+                "credit": "Intermediário de crédito",
+                "financing": "Financiamento de obras",
+                "realestate": "Mediação imobiliária"
+            }
+        },
+        "hero": {
+            "title": "Valorizamos imóveis e protegemos o seu investimento",
+            "cta": "Pedir orçamento"
+        },
+        "about": {
+            "title": "Quem somos?",
+            "p1_title": "LINE-AN • Latin",
+            "p1_text": "(n.) O nome LINEAN inspira-se no latim linea, que significa \"alinhado\", e nasce da fusão entre este conceito e a ideia de essência, evocando precisão, equilíbrio e continuidade. A sonoridade e a estética da marca foram concebidas para dialogar com a arquitectura moderna, sem perder o respeito pela elegância clássica que caracteriza as cidades portuguesas. Assim, a LINEAN posiciona-se como um nome que representa simultaneamente inovação e tradição, alinhando-se de forma perfeita com a harmonia visual e cultural da cidade.",
+            "p2": "Na LINEAN, não actuamos como a imobiliária tradicional que conheces. Somos uma empresa de investimento imobiliário com foco em criar oportunidades sólidas e sustentáveis, valorizamos cada projecto com atenção ao detalhe e com uma visão estratégica.",
+            "p3": "Acreditamos que a confiança constrói-se com simplicidade e clareza. Por isso, mantemos uma comunicação directa, sem complicações, para que cada passo do processo seja transparente e de fácil compreensão.",
+            "p4": "Trabalhamos sempre de forma justa e equilibrada, asseguramos que tanto a empresa como o cliente alcançam resultados satisfatórios e duradouros.",
+            "p5": "Na LINEAN, cada investimento une segurança, qualidade e potencial de valorização, transformando património em valor real e construímos relações duradouras com cada parceiro.",
+            "read_more": "Ler mais",
+            "read_less": "Ler menos"
+        },
+        "team": {
+            "title": "Equipa LINEAN",
+            "member_role": "Gerente e Gestor comercial",
+            "member_desc": "Trabalho com imobiliário há quase 9 anos, e ao analisar o mercado imobiliário não só em Portugal, mas em diversos países do mundo por onde passei, percebi um padrão comum entre todos os investidores, mediadores e proprietários em relação à forma de negociar. Surgiu em mim então um profundo desejo de fazer melhor e de forma mais justa para todos os envolventes. A LINEAN nasceu de um desejo sincero de ser única na sua metodologia e influência. Tenho orgulho de fazer parte deste projeto.",
+            "photo_placeholder": "Foto do Breno \n Que ainda não tenho"
+        },
+        "fundamentals": {
+            "title": "Nossos fundamentos",
+            "transparency_title": "Transparência",
+            "transparency_text": "Na LINEAN, acreditamos que cada cliente merece clareza total em todas as etapas do processo. Comunicamos cada avanço, cada decisão e cada possibilidade com honestidade, garantindo confiança e segurança do início ao fim.",
+            "rigor_title": "Rigor",
+            "rigor_text": "Não deixamos espaço para o acaso. Do planeamento à execução, cada detalhe é tratado com precisão técnica e compromisso absoluto com a qualidade. O nosso rigor é o que assegura resultados consistentes e duradouros.",
+            "results_title": "Resultados",
+            "results_text": "Trabalhamos para superar expectativas. A nossa abordagem estratégica e cuidadosa traduz-se em soluções eficientes, estéticas e funcionais. Na LINEAN, os resultados não são apenas um objetivo são a nossa assinatura."
+        },
+        "testimonials": {
+            "title": "o que dizem sobre a Linean",
+            "role_owner": "Proprietário",
+            "role_investor": "Investidora",
+            "role_client": "Cliente",
+            "t1": "A Linean transformou a nossa visão em realidade. O profissionalismo e a dedicação da equipa foram evidentes em cada etapa do projeto.",
+            "t2": "Sentimo-nos acompanhados e seguros durante todo o processo de investimento. A transparência é sem dúvida o ponto forte desta equipa.",
+            "t3": "Excelente serviço! A equipa da Linean foi super profissional, cumpriu todos os prazos e superou as nossas expectativas de rentabilidade."
+        },
+        "footer": {
+            "desc": "Valorizamos imóveis e protegemos o seu investimento com transparência e rigor.",
+            "rights": "Linean Construction. Todos os direitos reservados."
+        }
+    },
+    "en": {
+        "header": {
+            "about": "About us",
+            "group": "LINEAN Group",
+            "contact": "Contact",
+            "faq": "FAQ'S",
+            "services": {
+                "construction": "Construction and remodeling",
+                "credit": "Credit intermediary",
+                "financing": "Construction financing",
+                "realestate": "Real estate mediation"
+            }
+        },
+        "hero": {
+            "title": "We value properties and protect your investment",
+            "cta": "Request quote"
+        },
+        "about": {
+            "title": "Who are we?",
+            "p1_title": "LINE-AN • Latin",
+            "p1_text": "(n.) The name LINEAN is inspired by the Latin linea, meaning \"aligned\", and is born from the fusion of this concept with the idea of essence, evoking precision, balance, and continuity. The brand's sonority and aesthetics were conceived to dialogue with modern architecture, without losing respect for the classic elegance that characterizes Portuguese cities. Thus, LINEAN positions itself as a name representing both innovation and tradition, aligning perfectly with the city's visual and cultural harmony.",
+            "p2": "At LINEAN, we don't act like the traditional real estate agency you know. We are a real estate investment company focused on creating solid and sustainable opportunities, valuing each project with attention to detail and a strategic vision.",
+            "p3": "We believe trust is built with simplicity and clarity. That's why we maintain direct communication, without complications, so that every step of the process is transparent and easy to understand.",
+            "p4": "We always work fairly and balanced, ensuring that both the company and the client achieve satisfactory and lasting results.",
+            "p5": "At LINEAN, every investment unites security, quality, and potential for appreciation, transforming heritage into real value and building lasting relationships with every partner.",
+            "read_more": "Read more",
+            "read_less": "Read less"
+        },
+        "team": {
+            "title": "LINEAN Team",
+            "member_role": "Manager and Commercial Manager",
+            "member_desc": "I have been working in real estate for almost 9 years, and analyzing the real estate market not only in Portugal but in various countries around the world where I have been, I noticed a common pattern among all investors, mediators, and owners regarding the way they negotiate. A deep desire then arose in me to do better and more fairly for all involved. LINEAN was born from a sincere desire to be unique in its methodology and influence. I am proud to be part of this project.",
+            "photo_placeholder": "Breno's Photo \n Which I don't have yet"
+        },
+        "fundamentals": {
+            "title": "Our fundamentals",
+            "transparency_title": "Transparency",
+            "transparency_text": "At LINEAN, we believe every client deserves total clarity at all stages of the process. We communicate every advance, every decision, and every possibility honestly, ensuring trust and security from start to finish.",
+            "rigor_title": "Rigor",
+            "rigor_text": "We leave no room for chance. From planning to execution, every detail is treated with technical precision and absolute commitment to quality. Our rigor ensures consistent and lasting results.",
+            "results_title": "Results",
+            "results_text": "We work to exceed expectations. Our strategic and careful approach translates into efficient, aesthetic, and functional solutions. At LINEAN, results are not just a goal, they are our signature."
+        },
+        "testimonials": {
+            "title": "what they say about Linean",
+            "role_owner": "Owner",
+            "role_investor": "Investor",
+            "role_client": "Client",
+            "t1": "Linean turned our vision into reality. The team's professionalism and dedication were evident at every stage of the project.",
+            "t2": "We felt accompanied and safe throughout the investment process. Transparency is undoubtedly this team's strong point.",
+            "t3": "Excellent service! The Linean team was super professional, met all deadlines and exceeded our profitability expectations."
+        },
+        "footer": {
+            "desc": "We value properties and protect your investment with transparency and rigor.",
+            "rights": "Linean Construction. All rights reserved."
+        }
+    }
+}

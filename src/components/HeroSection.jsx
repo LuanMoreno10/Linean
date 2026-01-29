@@ -1,4 +1,8 @@
+import { useLanguage } from '../context/LanguageContext';
+
 const HeroSection = () => {
+    const { t } = useLanguage();
+
     return (
         <section className="relative h-screen flex items-center text-white overflow-hidden">
             {/* Background Image with Overlay */}
@@ -25,17 +29,15 @@ const HeroSection = () => {
             <div className="container mx-auto px-6 relative z-10">
                 <div className="max-w-xl space-y-8 fade-in">
                     <h1 className="text-5xl md:text-6xl font-display font-bold leading-tight">
-                        Valorizamos imóveis e<br />
-                        protegemos o seu<br />
-                        investimento
+                        {t('hero.title')}
                     </h1>
 
                     <div className="flex flex-col sm:flex-row gap-4">
                         <button className="bg-primary hover:bg-white hover:text-primary text-white px-8 py-3 rounded-none font-medium transition-all duration-300 border border-transparent hover:border-primary">
-                            Pedir orçamento
+                            {t('hero.cta')}
                         </button>
                         <button className="bg-accent text-dark hover:bg-white px-8 py-3 rounded-none font-medium transition-all duration-300">
-                            Pedir orçamento
+                            {t('hero.cta')}
                         </button>
                     </div>
                 </div>
