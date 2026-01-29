@@ -1,14 +1,13 @@
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
-const FAQItem = ({ question, answer }) => {
-    const [isOpen, setIsOpen] = useState(false);
-
+const FAQItem = ({ question, answer, isOpen, onToggle }) => {
     return (
         <div className="border-b border-gray-200 py-4 last:border-0">
             <button
                 className="w-full flex justify-between items-center text-left focus:outline-none group"
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={onToggle}
             >
                 <span className="text-lg font-medium text-dark group-hover:text-primary transition-colors pr-4">
                     {question}
@@ -30,38 +29,45 @@ const FAQItem = ({ question, answer }) => {
 };
 
 const FAQ = () => {
+    const [openIndex, setOpenIndex] = useState(null);
+    const { t } = useLanguage();
+
+    const handleToggle = (index) => {
+        setOpenIndex(openIndex === index ? null : index);
+    };
+
     const faqs = [
         {
-            question: "A LINEAN compra imóveis?",
-            answer: "Não necessariamente. O foco não é comprar imóveis, mas valorizar ativos através de parcerias estruturadas. Em casos pontuais pode haver aquisição, mas não é o modelo principal."
+            question: t('faq_page.items.q1'),
+            answer: t('faq_page.items.a1')
         },
         {
-            question: "Como funciona para proprietários?",
-            answer: "O proprietário entra com o imóvel. A LINEAN entra com a estratégia, projeto, gestão, obra e custos. Após a venda, o lucro da valorização é dividido conforme contrato."
+            question: t('faq_page.items.q2'),
+            answer: t('faq_page.items.a2')
         },
         {
-            question: "E se o imóvel estiver degradado ou inacabado?",
-            answer: "É exatamente esse o tipo de imóvel que procuramos. Ativos parados, degradados, herdados ou mal aproveitados fazem parte do nosso foco."
+            question: t('faq_page.items.q3'),
+            answer: t('faq_page.items.a3')
         },
         {
-            question: "O proprietário perde o controlo do imóvel?",
-            answer: "Não. Tudo é contratualizado. O proprietário mantém proteção jurídica e visibilidade sobre todo o processo, do início à venda."
+            question: t('faq_page.items.q4'),
+            answer: t('faq_page.items.a4')
         },
         {
-            question: "A LINEAN assume os custos da obra?",
-            answer: "Sim, nos modelos de parceria. Os custos são assumidos pela operação e recuperados apenas no momento da venda, conforme definido em contrato."
+            question: t('faq_page.items.q5'),
+            answer: t('faq_page.items.a5')
         },
         {
-            question: "Existe risco para o proprietário?",
-            answer: "O risco é mitigado por contrato e controlo de custos. O proprietário não investe capital adicional nem gere a obra."
+            question: t('faq_page.items.q6'),
+            answer: t('faq_page.items.a6')
         },
         {
-            question: "Trabalham com investidores?",
-            answer: "Sim. Estruturamos sociedades onde investidores participam com capital, com percentagens proporcionais e total transparência sobre cada projeto."
+            question: t('faq_page.items.q7'),
+            answer: t('faq_page.items.a7')
         },
         {
-            question: "Como posso avançar?",
-            answer: "Contacto direto. Analisamos o imóvel e dizemos de forma clara se faz sentido avançar ou não."
+            question: t('faq_page.items.q8'),
+            answer: t('faq_page.items.a8')
         }
     ];
 
@@ -69,16 +75,21 @@ const FAQ = () => {
         <div className="pt-32 pb-20 min-h-screen bg-white">
             <div className="container mx-auto px-6 max-w-3xl">
                 <h1 className="text-4xl md:text-5xl font-display font-bold text-center mb-4 text-dark">
-                    Perguntas frequentes
+                    {t('faq_page.title')}
                 </h1>
                 <p className="text-center text-gray-500 mb-16 max-w-lg mx-auto">
-                    Encontre abaixo respostas para as perguntas mais frequentes.
-                    Se não encontrar o que procura, entre em contacto connosco.
+                    {t('faq_page.subtitle')}
                 </p>
 
                 <div className="space-y-2">
                     {faqs.map((faq, index) => (
-                        <FAQItem key={index} question={faq.question} answer={faq.answer} />
+                        <FAQItem
+                            key={index}
+                            question={faq.question}
+                            answer={faq.answer}
+                            isOpen={openIndex === index}
+                            onToggle={() => handleToggle(index)}
+                        />
                     ))}
                 </div>
             </div>

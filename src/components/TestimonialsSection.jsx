@@ -54,13 +54,13 @@ const TestimonialsSection = () => {
                     <div className="flex space-x-2">
                         <button
                             onClick={prevSlide}
-                            className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-800 transition-colors"
+                            className="w-8 h-8 rounded-full bg-gray-200 text-gray-900 flex items-center justify-center hover:bg-gray-300 transition-colors"
                         >
                             <ChevronLeft size={16} />
                         </button>
                         <button
                             onClick={nextSlide}
-                            className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-800 transition-colors"
+                            className="w-8 h-8 rounded-full bg-gray-200 text-gray-900 flex items-center justify-center hover:bg-gray-300 transition-colors"
                         >
                             <ChevronRight size={16} />
                         </button>

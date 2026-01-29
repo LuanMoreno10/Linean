@@ -54,6 +54,28 @@
         "footer": {
             "desc": "Valorizamos imóveis e protegemos o seu investimento com transparência e rigor.",
             "rights": "Linean Construction. Todos os direitos reservados."
+        },
+        "faq_page": {
+            "title": "Perguntas frequentes",
+            "subtitle": "Encontre abaixo respostas para as perguntas mais frequentes. Se não encontrar o que procura, entre em contacto connosco.",
+            "items": {
+                "q1": "A LINEAN compra imóveis?",
+                "a1": "Não necessariamente. O foco não é comprar imóveis, mas valorizar ativos através de parcerias estruturadas. Em casos pontuais pode haver aquisição, mas não é o modelo principal.",
+                "q2": "Como funciona para proprietários?",
+                "a2": "O proprietário entra com o imóvel. A LINEAN entra com a estratégia, projeto, gestão, obra e custos. Após a venda, o lucro da valorização é dividido conforme contrato.",
+                "q3": "E se o imóvel estiver degradado ou inacabado?",
+                "a3": "É exatamente esse o tipo de imóvel que procuramos. Ativos parados, degradados, herdados ou mal aproveitados fazem parte do nosso foco.",
+                "q4": "O proprietário perde o controlo do imóvel?",
+                "a4": "Não. Tudo é contratualizado. O proprietário mantém proteção jurídica e visibilidade sobre todo o processo, do início à venda.",
+                "q5": "A LINEAN assume os custos da obra?",
+                "a5": "Sim, nos modelos de parceria. Os custos são assumidos pela operação e recuperados apenas no momento da venda, conforme definido em contrato.",
+                "q6": "Existe risco para o proprietário?",
+                "a6": "O risco é mitigado por contrato e controlo de custos. O proprietário não investe capital adicional nem gere a obra.",
+                "q7": "Trabalham com investidores?",
+                "a7": "Sim. Estruturamos sociedades onde investidores participam com capital, com percentagens proporcionais e total transparência sobre cada projeto.",
+                "q8": "Como posso avançar?",
+                "a8": "Contacto direto. Analisamos o imóvel e dizemos de forma clara se faz sentido avançar ou não."
+            }
         }
     },
     "en": {
@@ -111,6 +133,28 @@
         "footer": {
             "desc": "We value properties and protect your investment with transparency and rigor.",
             "rights": "Linean Construction. All rights reserved."
+        },
+        "faq_page": {
+            "title": "Frequently Asked Questions",
+            "subtitle": "Find answers to frequently asked questions below. If you cannot find what you are looking for, contact us.",
+            "items": {
+                "q1": "Does LINEAN buy properties?",
+                "a1": "Not necessarily. The focus is not on buying properties, but on adding value to assets through structured partnerships. In specific cases acquisition may occur, but it is not the main model.",
+                "q2": "How does it work for owners?",
+                "a2": "The owner provides the property. LINEAN provides the strategy, project, management, construction, and costs. After the sale, the profit from appreciation is shared according to the contract.",
+                "q3": "What if the property is degraded or unfinished?",
+                "a3": "That is exactly the type of property we are looking for. Idle, degraded, inherited, or underutilized assets are part of our focus.",
+                "q4": "Does the owner lose control of the property?",
+                "a4": "No. Everything is contractualized. The owner maintains legal protection and visibility over the entire process, from start to sale.",
+                "q5": "Does LINEAN assume the construction costs?",
+                "a5": "Yes, in partnership models. Costs are assumed by the operation and recovered only at the time of sale, as defined in the contract.",
+                "q6": "Is there risk for the owner?",
+                "a6": "Risk is mitigated by contract and cost control. The owner does not invest additional capital nor manage the construction.",
+                "q7": "Do you work with investors?",
+                "a7": "Yes. We structure societies where investors participate with capital, with proportional percentages and total transparency on each project.",
+                "q8": "How can I proceed?",
+                "a8": "Direct contact. We analyze the property and clearly maintain if it makes sense to proceed or not."
+            }
         }
     }
 }
