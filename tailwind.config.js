@@ -15,8 +15,8 @@ export default {
         dark: '#1a1a1a',
       },
       fontFamily: {
-        sans: ['Manrope', 'sans-serif'],
-        display: ['Manrope', 'sans-serif'], // Professional look
+        sans: ['Work Sans', 'sans-serif'],
+        display: ['Work Sans', 'sans-serif'],
       }
     },
   },
