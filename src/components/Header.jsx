@@ -65,7 +65,9 @@ const Header = () => {
                     <a href="/#contact" className={linkClass}>{t('header.contact')}</a>
                     <a href="/faq" className={linkClass}>{t('header.faq')}</a>
                     <button onClick={toggleLanguage} className={linkClass}>
-                        PT | EN
+                        <span className={language === 'pt' ? 'font-bold' : 'font-normal'}>PT</span>
+                        <span className="mx-1">|</span>
+                        <span className={language === 'en' ? 'font-bold' : 'font-normal'}>EN</span>
                     </button>
                 </nav>
 
@@ -99,8 +101,10 @@ const Header = () => {
                     </div>
                     <a href="/#contact" className="text-dark hover:text-primary" onClick={() => setIsMenuOpen(false)}>{t('header.contact')}</a>
                     <a href="/faq" className="text-dark hover:text-primary" onClick={() => setIsMenuOpen(false)}>{t('header.faq')}</a>
-                    <button onClick={() => { toggleLanguage(); setIsMenuOpen(false); }} className="text-left text-dark hover:text-primary font-bold">
-                        PT | EN
+                    <button onClick={() => { toggleLanguage(); setIsMenuOpen(false); }} className="text-left text-dark hover:text-primary">
+                        <span className={language === 'pt' ? 'font-bold' : 'font-normal'}>PT</span>
+                        <span className="mx-1">|</span>
+                        <span className={language === 'en' ? 'font-bold' : 'font-normal'}>EN</span>
                     </button>
                 </div>
             )}

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
 const HeroSection = () => {
@@ -17,12 +18,6 @@ const HeroSection = () => {
 
                 {/* Dark Overlay for opacity */}
                 <div className="absolute inset-0 bg-black/60"></div>
-
-                {/* Diagonal Lines Pattern */}
-                <div className="absolute inset-0">
-                    <div className="absolute top-0 left-0 w-full h-full border-b border-gray-500/30 transform -skew-y-12 origin-top-right scale-150"></div>
-                    <div className="absolute bottom-0 right-0 w-full h-full border-t border-gray-500/30 transform -skew-y-12 origin-bottom-left scale-150"></div>
-                </div>
             </div>
 
             {/* Content */}
@@ -33,12 +28,12 @@ const HeroSection = () => {
                     </h1>
 
                     <div className="flex flex-col sm:flex-row gap-4">
-                        <button className="bg-primary hover:bg-white hover:text-primary text-white px-8 py-3 rounded-none font-medium transition-all duration-300 border border-transparent hover:border-primary">
+                        <Link to="/budget" className="bg-primary hover:bg-white hover:text-primary text-white px-8 py-3 rounded-none font-medium transition-all duration-300 border border-transparent hover:border-primary text-center">
                             {t('hero.cta')}
-                        </button>
-                        <button className="bg-accent text-dark hover:bg-white px-8 py-3 rounded-none font-medium transition-all duration-300">
+                        </Link>
+                        <Link to="/budget" className="bg-accent text-dark hover:bg-white px-8 py-3 rounded-none font-medium transition-all duration-300 text-center">
                             {t('hero.cta')}
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>

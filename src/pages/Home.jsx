@@ -3,23 +3,33 @@ import AboutSection from '../components/AboutSection';
 import FundamentalsSection from '../components/FundamentalsSection';
 import TeamSection from '../components/TeamSection';
 import TestimonialsSection from '../components/TestimonialsSection';
+import AnimatedSection from '../components/AnimatedSection';
 
 const Home = () => {
     return (
         <div className="w-full">
-            {/* Hero Section */}
+            {/* Hero Section - No scroll animation as it's above fold */}
             <HeroSection />
 
             {/* About Section */}
-            <AboutSection />
+            <AnimatedSection>
+                <AboutSection />
+            </AnimatedSection>
 
             {/* Team Section */}
-            <TeamSection />
+            <AnimatedSection>
+                <TeamSection />
+            </AnimatedSection>
+
             {/* Fundamentals Section */}
-            <FundamentalsSection />
+            <AnimatedSection>
+                <FundamentalsSection />
+            </AnimatedSection>
 
             {/* Testimonials Section */}
-            <TestimonialsSection />
+            <AnimatedSection>
+                <TestimonialsSection />
+            </AnimatedSection>
         </div>
     );
 };

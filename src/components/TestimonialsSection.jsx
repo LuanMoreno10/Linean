@@ -49,7 +49,7 @@ const TestimonialsSection = () => {
     return (
         <section className="py-20 bg-white border-t border-gray-100">
             <div className="container mx-auto px-6">
-                <div className="flex justify-between items-center mb-12 border-b border-black pb-4">
+                <div className="flex justify-between items-center mb-12 border-b border-gray-300 pb-4">
                     <h2 className="text-xl text-dark">{t('testimonials.title')}</h2>
                     <div className="flex space-x-2">
                         <button

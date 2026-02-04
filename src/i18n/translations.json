@@ -53,7 +53,7 @@
         },
         "footer": {
             "desc": "Valorizamos imóveis e protegemos o seu investimento com transparência e rigor.",
-            "rights": "Linean Construction. Todos os direitos reservados."
+            "rights": "Linean. Todos os direitos reservados."
         },
         "faq_page": {
             "title": "Perguntas frequentes",
@@ -75,6 +75,27 @@
                 "a7": "Sim. Estruturamos sociedades onde investidores participam com capital, com percentagens proporcionais e total transparência sobre cada projeto.",
                 "q8": "Como posso avançar?",
                 "a8": "Contacto direto. Analisamos o imóvel e dizemos de forma clara se faz sentido avançar ou não."
+            }
+        },
+        "budget_page": {
+            "title": "Solicitar Orçamento",
+            "subtitle": "Conte-nos sobre o seu projeto. Estamos prontos para o tornar realidade.",
+            "form": {
+                "name": "Nome Completo",
+                "email": "Email",
+                "phone": "Telefone",
+                "service": "Tipo de Serviço",
+                "service_options": {
+                    "construction": "Construção de Raiz",
+                    "renovation": "Remodelação",
+                    "design": "Design de Interiores",
+                    "consulting": "Consultoria",
+                    "other": "Outro"
+                },
+                "message": "Detalhes do Projeto",
+                "submit": "Enviar Pedido",
+                "submitting": "A enviar...",
+                "success": "Obrigado! Entraremos em contacto brevemente."
             }
         }
     },
@@ -132,7 +153,7 @@
         },
         "footer": {
             "desc": "We value properties and protect your investment with transparency and rigor.",
-            "rights": "Linean Construction. All rights reserved."
+            "rights": "Linean. All rights reserved."
         },
         "faq_page": {
             "title": "Frequently Asked Questions",
@@ -154,6 +175,27 @@
                 "a7": "Yes. We structure societies where investors participate with capital, with proportional percentages and total transparency on each project.",
                 "q8": "How can I proceed?",
                 "a8": "Direct contact. We analyze the property and clearly maintain if it makes sense to proceed or not."
+            }
+        },
+        "budget_page": {
+            "title": "Request Quote",
+            "subtitle": "Tell us about your project. We are ready to make it a reality.",
+            "form": {
+                "name": "Full Name",
+                "email": "Email",
+                "phone": "Phone",
+                "service": "Service Type",
+                "service_options": {
+                    "construction": "New Construction",
+                    "renovation": "Renovation",
+                    "design": "Interior Design",
+                    "consulting": "Consulting",
+                    "other": "Other"
+                },
+                "message": "Project Details",
+                "submit": "Send Request",
+                "submitting": "Sending...",
+                "success": "Thank you! We will be in touch shortly."
             }
         }
     }

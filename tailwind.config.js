@@ -12,7 +12,7 @@ export default {
           dark: '#6e6e6e',
         },
         accent: '#F6E9CB',
-        dark: '#1a1a1a',
+        dark: '#404040',
       },
       fontFamily: {
         sans: ['Work Sans', 'sans-serif'],
