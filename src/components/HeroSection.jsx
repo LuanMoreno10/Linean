@@ -28,10 +28,7 @@ const HeroSection = () => {
                     </h1>
 
                     <div className="flex flex-col sm:flex-row gap-4">
-                        <Link to="/budget" className="bg-primary hover:bg-white hover:text-primary text-white px-8 py-3 rounded-none font-medium transition-all duration-300 border border-transparent hover:border-primary text-center">
-                            {t('hero.cta')}
-                        </Link>
-                        <Link to="/budget" className="bg-accent text-dark hover:bg-white px-8 py-3 rounded-none font-medium transition-all duration-300 text-center">
+                       <Link to="/budget" className="bg-accent text-dark hover:bg-gray-500 hover:text-white px-8 py-3 rounded-none font-medium transition-all duration-300 text-center">
                             {t('hero.cta')}
                         </Link>
                     </div>

@@ -51,9 +51,6 @@ const Header = () => {
                                 {t('header.services.construction')}
                             </a>
                             <a href="#" className="block px-6 py-3 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors">
-                                {t('header.services.credit')}
-                            </a>
-                            <a href="#" className="block px-6 py-3 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors">
                                 {t('header.services.financing')}
                             </a>
                             <a href="#" className="block px-6 py-3 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors">

@@ -21,7 +21,7 @@ const FundamentalsSection = () => {
                                 className="h-full object-contain opacity-90 group-hover:scale-105 transition-transform duration-500"
                             />
                         </div>
-                        <p className="text-dark font-sans text-sm leading-relaxed text-left">
+                        <p className="text-dark font-sans text-sm leading-relaxed text-justify">
                             {t('fundamentals.transparency_text')}
                         </p>
                     </div>
@@ -36,7 +36,7 @@ const FundamentalsSection = () => {
                                 className="h-full object-contain opacity-90 group-hover:scale-105 transition-transform duration-500"
                             />
                         </div>
-                        <p className="text-dark font-sans text-sm leading-relaxed text-left">
+                        <p className="text-dark font-sans text-sm leading-relaxed text-justify">
                             {t('fundamentals.rigor_text')}
                         </p>
                     </div>
@@ -51,7 +51,7 @@ const FundamentalsSection = () => {
                                 className="h-full object-contain opacity-90 group-hover:scale-105 transition-transform duration-500"
                             />
                         </div>
-                        <p className="text-dark font-sans text-sm leading-relaxed text-left">
+                        <p className="text-dark font-sans text-sm leading-relaxed text-justify">
                             {t('fundamentals.results_text')}
                         </p>
                     </div>

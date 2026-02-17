@@ -24,7 +24,32 @@ const TestimonialsSection = () => {
             text: t('testimonials.t3'),
             name: "Maria Silva",
             role: t('testimonials.role_client')
+        },
+        {
+            id: 4,
+            text: t('testimonials.t4'),
+            name: "Diogo Silva",
+            role: t('testimonials.role_investor')
+        },
+        {
+            id: 5,
+            text: t('testimonials.t5'),
+            name: "Marek Pukel",
+            role: t('testimonials.role_investor')
+        },
+        {
+            id: 6,
+            text: t('testimonials.t6'),
+            name: "António Carvalho | Imounidos Construções",
+            role: t('testimonials.role_partner')
+        },
+        {
+            id: 7,
+            text: t('testimonials.t7'),
+            name: "Joana Pereira",
+            role: t('testimonials.role_client')
         }
+
     ];
 
     const nextSlide = () => {

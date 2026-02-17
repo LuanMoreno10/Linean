@@ -47,7 +47,7 @@ const Budget = () => {
                             <h1 className="text-4xl md:text-5xl font-display font-bold text-dark mb-4">
                                 {t('budget_page.title')}
                             </h1>
-                            <p className="text-gray-500 text-lg">
+                            <p className="text-gray-500 text-lg text-center">
                                 {t('budget_page.subtitle')}
                             </p>
                         </div>
