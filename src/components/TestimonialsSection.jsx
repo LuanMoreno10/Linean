@@ -10,42 +10,24 @@ const TestimonialsSection = () => {
         {
             id: 1,
             text: t('testimonials.t1'),
-            name: "Carlos Ferreira",
-            role: t('testimonials.role_owner')
+            name: "Diogo Silva",
+            role: t('testimonials.role_investor')
         },
         {
             id: 2,
             text: t('testimonials.t2'),
-            name: "Ana Rodrigues",
+            name: "Marek Pukel",
             role: t('testimonials.role_investor')
         },
         {
             id: 3,
             text: t('testimonials.t3'),
-            name: "Maria Silva",
-            role: t('testimonials.role_client')
-        },
-        {
-            id: 4,
-            text: t('testimonials.t4'),
-            name: "Diogo Silva",
-            role: t('testimonials.role_investor')
-        },
-        {
-            id: 5,
-            text: t('testimonials.t5'),
-            name: "Marek Pukel",
-            role: t('testimonials.role_investor')
-        },
-        {
-            id: 6,
-            text: t('testimonials.t6'),
             name: "António Carvalho | Imounidos Construções",
             role: t('testimonials.role_partner')
         },
         {
-            id: 7,
-            text: t('testimonials.t7'),
+            id: 4,
+            text: t('testimonials.t4'),
             name: "Joana Pereira",
             role: t('testimonials.role_client')
         }
