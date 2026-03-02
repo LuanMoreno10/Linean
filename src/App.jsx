@@ -7,6 +7,9 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import FAQ from './pages/FAQ';
 import Budget from './pages/Budget';
+import Construction from './pages/Construction';
+import Architecture from './pages/Architecture';
+import RealEstate from './pages/RealEstate';
 
 function App() {
   useEffect(() => {
@@ -43,6 +46,9 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/budget" element={<Budget />} />
+              <Route path="/construtora" element={<Construction />} />
+              <Route path="/arquitetura" element={<Architecture />} />
+              <Route path="/mediacao-imobiliaria" element={<RealEstate />} />
             </Routes>
           </main>
           <Footer />

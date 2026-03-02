@@ -11,7 +11,7 @@ const AboutSection = () => {
             <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-start">
                 {/* Image Side - Left */}
                 <div className="">
-                    <div className="relative w-full aspect-square overflow-hidden">
+                    <div className="relative w-3/4 mx-auto aspect-square overflow-hidden">
                         {/* Background Image */}
                         <div
                             className="absolute inset-0 bg-cover bg-center"

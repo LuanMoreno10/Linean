@@ -47,15 +47,15 @@ const Header = () => {
 
                         {/* Dropdown Menu */}
                         <div className="absolute top-full left-0 mt-2 w-64 bg-white shadow-lg rounded-sm py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 text-left border-t-2 border-primary">
-                            <a href="#" className="block px-6 py-3 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors">
+                            <Link to="/construtora" className="block px-6 py-3 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors">
                                 {t('header.services.construction')}
-                            </a>
-                            <a href="#" className="block px-6 py-3 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors">
-                                {t('header.services.financing')}
-                            </a>
-                            <a href="#" className="block px-6 py-3 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors">
+                            </Link>
+                            <Link to="/arquitetura" className="block px-6 py-3 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors">
+                                {t('header.services.architecture')}
+                            </Link>
+                            <Link to="/mediacao-imobiliaria" className="block px-6 py-3 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors">
                                 {t('header.services.realestate')}
-                            </a>
+                            </Link>
                         </div>
                     </div>
 
@@ -91,8 +91,9 @@ const Header = () => {
                         </button>
                         {isMobileSubmenuOpen && (
                             <div className="pl-4 mt-2 flex flex-col space-y-2 border-l-2 border-gray-100 ml-1">
-                                <a href="#" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMenuOpen(false)}>{t('header.services.construction')}</a>
-                                <a href="#" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMenuOpen(false)}>{t('header.services.financing')}</a>
+                                <Link to="/construtora" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMenuOpen(false)}>{t('header.services.construction')}</Link>
+                                <Link to="/arquitetura" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMenuOpen(false)}>{t('header.services.architecture')}</Link>
+                                <Link to="/mediacao-imobiliaria" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMenuOpen(false)}>{t('header.services.realestate')}</Link>
                             </div>
                         )}
                     </div>

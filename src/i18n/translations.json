@@ -6,8 +6,8 @@
             "contact": "Contactos",
             "faq": "FAQ'S",
             "services": {
-                "construction": "Construção e remodelações",
-                "financing": "Financiamento de obras",
+                "architecture": "Arquitetura",
+                "construction": "Construtora",
                 "realestate": "Mediação imobiliária"
             }
         },
@@ -98,6 +98,27 @@
                 "submitting": "A enviar...",
                 "success": "Obrigado! Entraremos em contacto brevemente."
             }
+        },
+        "architecture_page": {
+            "title": "Arquitetura",
+            "p1": "O Departamento de Arquitetura atua de forma integrada com as restantes áreas do grupo, assegurando o desenvolvimento de projetos tecnicamente consistentes, economicamente viáveis e em total conformidade com os enquadramentos legais e urbanísticos aplicáveis.",
+            "p2": "A equipa é liderada pelo arquiteto Carlos Silva, com experiência consolidada em reabilitação urbana, licenciamento, alteração de uso e desenvolvimento de projetos orientados para execução. O seu acompanhamento direto garante rigor técnico em todas as fases, desde os estudos prévios e análises de viabilidade até ao licenciamento e apoio à obra.",
+            "p3": "A proximidade com a área da construção e com a gestão de investimento permite antecipar constrangimentos técnicos, reduzir riscos em fase de execução e assegurar soluções compatíveis com custos, prazos e objetivos do ativo imobiliário.",
+            "p4": "Trabalhar connosco significa contar com um departamento de arquitetura estruturado, tecnicamente responsável e totalmente integrado no processo construtivo e financeiro de cada projeto."
+        },
+        "construction_page": {
+            "title": "Construtora",
+            "p1": "A Linean Construtora assegura a execução das obras com foco no rigor técnico, controlo de prazos e gestão criteriosa de custos. Atua de forma articulada com os departamentos de Arquitetura e Gestão de Projeto, garantindo total coerência entre projeto aprovado, planeamento de obra e execução.",
+            "p2": "A operação é apoiada por uma equipa técnica experiente, com destaque para Ivan Leão e Jefferson Souza, cujo acompanhamento no terreno contribui para o controlo da qualidade construtiva, coordenação de equipas e cumprimento dos requisitos técnicos e regulamentares em cada fase da obra.",
+            "p3": "A proximidade com a fase de projeto permite antecipar incompatibilidades, reduzir trabalhos adicionais e minimizar desvios orçamentais, assegurando soluções construtivas exequíveis, eficientes e alinhadas com os objetivos do ativo imobiliário.",
+            "p4": "Trabalhar com a Linean Construtora significa contar com uma estrutura técnica orientada para a execução responsável, previsibilidade financeira e entrega consistente dos projetos."
+        },
+        "realestate_page": {
+            "title": "Mediação imobiliária",
+            "p1": "Trabalhamos em parceria com proprietários que já têm o imóvel. A casa continua a ser do proprietário. A Linean entra com o capital, com a equipa e com toda a estrutura técnica necessária para desenvolver o projeto do início ao fim.",
+            "p2": "Assumimos o desenvolvimento completo do processo projeto, arquitetura, especialidades, licenciamento, obra e coordenação com o objetivo de valorizar o ativo de forma estruturada, eficiente e tecnicamente controlada. A valorização gerada é partilhada de forma transparente, com interesses alinhados entre as partes.",
+            "p3": "Este modelo permite ao proprietário transformar o seu imóvel sem avançar com capital próprio, beneficiando de uma equipa experiente, controlo técnico e uma abordagem orientada para o valor real do ativo imobiliário.",
+            "p4": "Parcerias claras, risco partilhado e foco em resultados concretos."
         }
     },
     "en": {
@@ -107,8 +128,8 @@
             "contact": "Contact",
             "faq": "FAQ'S",
             "services": {
-                "construction": "Construction and remodeling",
-                "financing": "Construction financing",
+                "architecture": "Architecture",
+                "construction": "Construction",
                 "realestate": "Real estate mediation"
             }
         },
@@ -152,7 +173,6 @@
             "t2": "From the first viewing to the final paperwork, working with Linean was a smooth and well-organized experience. William was extremely helpful, and the additional consultations beyond the purchase itself were genuinely valuable. I would confidently recommend Linean to anyone considering property investment in Porto or Portugal.",
             "t3": "We have enormous admiration for LINEA. It is a privilege to be a partner of such a resilient company that helps us find solutions to succeed together. Keep up the good work!",
             "t4": "The work was conducted professionally and on time. I am satisfied with the result."
-            
         },
         "footer": {
             "desc": "We value properties and protect your investment with transparency and rigor.",
@@ -200,6 +220,27 @@
                 "submitting": "Sending...",
                 "success": "Thank you! We will be in touch shortly."
             }
+        },
+        "architecture_page": {
+            "title": "Architecture",
+            "p1": "The Architecture Department operates in an integrated manner with the group's other areas, ensuring the development of technically consistent, economically viable projects that fully comply with applicable legal and urban frameworks.",
+            "p2": "The team is led by architect Carlos Silva, with solid experience in urban rehabilitation, licensing, change of use, and execution-oriented project development. His direct monitoring guarantees technical rigor in all phases, from preliminary studies and feasibility analysis to licensing and construction support.",
+            "p3": "Proximity to the construction area and investment management allows anticipating technical constraints, reducing risks during execution, and ensuring solutions compatible with costs, deadlines, and objectives of the real estate asset.",
+            "p4": "Working with us means having a structured, technically responsible architecture department fully integrated into the constructive and financial process of each project."
+        },
+        "construction_page": {
+            "title": "Construction",
+            "p1": "Linean Construction ensures the execution of works focusing on technical rigor, deadline control, and careful cost management. It operates in coordination with the Architecture and Project Management departments, guaranteeing complete coherence between the approved project, site planning, and execution.",
+            "p2": "The operation is supported by an experienced technical team, highlighting Ivan Leão and Jefferson Souza, whose on-site monitoring contributes to constructive quality control, team coordination, and compliance with technical and regulatory requirements in each phase of the work.",
+            "p3": "Proximity to the design phase makes it possible to anticipate incompatibilities, reduce additional work, and minimize budgetary deviations, ensuring feasible, efficient construction solutions aligned with the real estate asset's objectives.",
+            "p4": "Working with Linean Construction means counting on a technical structure oriented towards responsible execution, financial predictability, and consistent delivery of projects."
+        },
+        "realestate_page": {
+            "title": "Real Estate Mediation",
+            "p1": "We work in partnership with owners who already have the property. The house remains the owner's. Linean provides the capital, the team, and all the technical structure necessary to develop the project from start to finish.",
+            "p2": "We take on the complete development of the process project, architecture, specialties, licensing, construction, and coordination with the aim of valuing the asset in a structured, efficient, and technically controlled manner. The appreciation generated is shared transparently, with aligned interests between the parties.",
+            "p3": "This model allows the owner to transform their property without advancing their own capital, benefiting from an experienced team, technical control, and an approach oriented towards the real value of the real estate asset.",
+            "p4": "Clear partnerships, shared risk, and focus on concrete results."
         }
     }
 }

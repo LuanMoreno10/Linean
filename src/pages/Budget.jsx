@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import AnimatedSection from '../components/AnimatedSection';
+import emailjs from '@emailjs/browser';
 
 const Budget = () => {
     const { t } = useLanguage();
+    const form = useRef();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -11,7 +13,7 @@ const Budget = () => {
         service: 'construction',
         message: ''
     });
-    const [status, setStatus] = useState('idle'); // idle, submitting, success
+    const [status, setStatus] = useState('idle'); // idle, submitting, success, error
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -25,17 +27,30 @@ const Budget = () => {
         e.preventDefault();
         setStatus('submitting');
 
-        // Simulate API call
-        setTimeout(() => {
-            setStatus('success');
-            setFormData({
-                name: '',
-                email: '',
-                phone: '',
-                service: 'construction',
-                message: ''
+        // EmailJS integration
+        // 1. Create an account at https://www.emailjs.com/
+        // 2. Add an Email Service (e.g., Gmail) and get the Service ID
+        // 3. Create an Email Template and get the Template ID
+        // 4. Get your Public Key from Account -> API Keys
+        const serviceId = 'service_sh4jzjo';
+        const templateId = 'template_jjrixj5';
+        const publicKey = '7fuvE6cHIFMCgdXuN';
+
+        emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+            .then((result) => {
+                console.log(result.text);
+                setStatus('success');
+                setFormData({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    service: 'construction',
+                    message: ''
+                });
+            }, (error) => {
+                console.log(error.text);
+                setStatus('error');
             });
-        }, 1500);
     };
 
     return (
@@ -59,7 +74,12 @@ const Budget = () => {
                                 </h3>
                             </div>
                         ) : (
-                            <form onSubmit={handleSubmit} className="space-y-6 bg-white p-8 md:p-12 shadow-sm border border-gray-100 rounded-sm">
+                            <form ref={form} onSubmit={handleSubmit} className="space-y-6 bg-white p-8 md:p-12 shadow-sm border border-gray-100 rounded-sm">
+                                {status === 'error' && (
+                                    <div className="bg-red-100 text-red-700 p-4 rounded-sm text-center mb-6">
+                                        Ocorreu um erro ao enviar o pedido. Por favor, tente novamente.
+                                    </div>
+                                )}
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <label htmlFor="name" className="text-sm font-bold text-dark uppercase tracking-wider">
