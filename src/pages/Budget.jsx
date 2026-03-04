@@ -10,7 +10,7 @@ const Budget = () => {
         name: '',
         email: '',
         phone: '',
-        service: 'construction',
+        service: 'construção',
         message: ''
     });
     const [status, setStatus] = useState('idle'); // idle, submitting, success, error
@@ -32,9 +32,9 @@ const Budget = () => {
         // 2. Add an Email Service (e.g., Gmail) and get the Service ID
         // 3. Create an Email Template and get the Template ID
         // 4. Get your Public Key from Account -> API Keys
-        const serviceId = 'service_sh4jzjo';
-        const templateId = 'template_jjrixj5';
-        const publicKey = '7fuvE6cHIFMCgdXuN';
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
         emailjs.sendForm(serviceId, templateId, form.current, publicKey)
             .then((result) => {
@@ -137,11 +137,11 @@ const Budget = () => {
                                                 onChange={handleChange}
                                                 className="w-full bg-gray-50 border border-gray-200 p-3 outline-none focus:border-primary transition-colors text-dark appearance-none"
                                             >
-                                                <option value="construction">{t('budget_page.form.service_options.construction')}</option>
-                                                <option value="renovation">{t('budget_page.form.service_options.renovation')}</option>
-                                                <option value="design">{t('budget_page.form.service_options.design')}</option>
-                                                <option value="consulting">{t('budget_page.form.service_options.consulting')}</option>
-                                                <option value="other">{t('budget_page.form.service_options.other')}</option>
+                                                <option value="Construção">{t('budget_page.form.service_options.construction')}</option>
+                                                <option value="Remodelação">{t('budget_page.form.service_options.renovation')}</option>
+                                                <option value="Design">{t('budget_page.form.service_options.design')}</option>
+                                                <option value="Consultoria">{t('budget_page.form.service_options.consulting')}</option>
+                                                <option value="Outro">{t('budget_page.form.service_options.other')}</option>
                                             </select>
                                             <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
                                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
