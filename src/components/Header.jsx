@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -18,19 +19,30 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isMenuOpen]);
+
     const isHome = location.pathname === '/';
 
     // Header background logic: White if scrolled or not on home, Transparent if on home and top
-    const headerClass = `fixed w-full z-50 transition-all duration-300 ${isScrolled || !isHome ? 'bg-white shadow-sm py-4' : 'bg-transparent py-6'
+    const headerClass = `fixed w-full z-50 transition-all duration-300 ${isScrolled || !isHome || isMenuOpen ? 'bg-white shadow-sm py-4' : 'bg-transparent py-6'
         }`;
 
-    const linkClass = `text-sm font-medium transition-colors hover:text-primary ${isScrolled || !isHome ? 'text-dark' : 'text-white'
+    const linkClass = `text-sm font-medium transition-colors hover:text-primary ${isScrolled || !isHome || isMenuOpen ? 'text-dark' : 'text-white'
         }`;
 
     return (
         <header className={headerClass}>
-            <div className="container mx-auto px-6 flex justify-between items-center">
-                <a href="/" className={`text-2xl font-display font-bold tracking-tight transition-colors ${isScrolled || !isHome ? 'text-[#878787]' : 'text-white'}`}>
+            <div className="container mx-auto px-6 flex justify-between items-center relative z-50">
+                <a href="/" className={`text-2xl font-display font-bold tracking-tight transition-colors ${isScrolled || !isHome || isMenuOpen ? 'text-[#878787]' : 'text-white'}`}>
                     LINEAN
                 </a>
 
@@ -70,7 +82,7 @@ const Header = () => {
 
                 {/* Mobile Menu Button */}
                 <button
-                    className={`md:hidden ${isScrolled || !isHome ? 'text-dark' : 'text-white'}`}
+                    className={`md:hidden relative z-50 ${isScrolled || !isHome || isMenuOpen ? 'text-dark' : 'text-white'}`}
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
                     {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -78,34 +90,86 @@ const Header = () => {
             </div>
 
             {/* Mobile Nav */}
-            {isMenuOpen && (
-                <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-4 px-6 flex flex-col space-y-4">
-                    <a href="/#about" className="text-dark hover:text-primary" onClick={() => setIsMenuOpen(false)}>{t('header.about')}</a>
-                    <div>
-                        <button
-                            className="flex items-center justify-between w-full text-dark hover:text-primary"
-                            onClick={() => setIsMobileSubmenuOpen(!isMobileSubmenuOpen)}
-                        >
-                            <span>{t('header.group')}</span>
-                            <ChevronDown size={16} className={`transform transition-transform ${isMobileSubmenuOpen ? 'rotate-180' : ''}`} />
-                        </button>
-                        {isMobileSubmenuOpen && (
-                            <div className="pl-4 mt-2 flex flex-col space-y-2 border-l-2 border-gray-100 ml-1">
-                                <Link to="/construtora" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMenuOpen(false)}>{t('header.services.construction')}</Link>
-                                <Link to="/arquitetura" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMenuOpen(false)}>{t('header.services.architecture')}</Link>
-                                <Link to="/mediacao-imobiliaria" className="text-sm text-gray-600 hover:text-primary" onClick={() => setIsMenuOpen(false)}>{t('header.services.realestate')}</Link>
+            <AnimatePresence>
+                {isMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.3, ease: 'easeInOut' }}
+                        className="md:hidden fixed inset-0 top-0 left-0 w-full h-[100dvh] bg-white z-40 pt-28 px-6 flex flex-col overflow-y-auto pb-8"
+                    >
+                        <nav className="flex flex-col space-y-6 text-2xl font-medium mt-4">
+                            <a href="/#about" className="text-dark hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+                                {t('header.about')}
+                            </a>
+
+                            <div className="flex flex-col space-y-4">
+                                <button
+                                    className="flex items-center justify-between w-full text-dark hover:text-primary transition-colors text-left"
+                                    onClick={() => setIsMobileSubmenuOpen(!isMobileSubmenuOpen)}
+                                >
+                                    <span>{t('header.group')}</span>
+                                    <motion.div
+                                        animate={{ rotate: isMobileSubmenuOpen ? 180 : 0 }}
+                                        transition={{ duration: 0.3 }}
+                                    >
+                                        <ChevronDown size={24} />
+                                    </motion.div>
+                                </button>
+
+                                <AnimatePresence>
+                                    {isMobileSubmenuOpen && (
+                                        <motion.div
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: 'auto', opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            className="overflow-hidden"
+                                        >
+                                            <div className="pl-4 border-l-2 border-primary/20 flex flex-col space-y-4 py-2 mt-2">
+                                                <Link to="/construtora" className="text-xl text-gray-600 hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+                                                    {t('header.services.construction')}
+                                                </Link>
+                                                <Link to="/arquitetura" className="text-xl text-gray-600 hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+                                                    {t('header.services.architecture')}
+                                                </Link>
+                                                <Link to="/mediacao-imobiliaria" className="text-xl text-gray-600 hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+                                                    {t('header.services.realestate')}
+                                                </Link>
+                                            </div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
                             </div>
-                        )}
-                    </div>
-                    <a href="/#contact" className="text-dark hover:text-primary" onClick={() => setIsMenuOpen(false)}>{t('header.contact')}</a>
-                    <a href="/faq" className="text-dark hover:text-primary" onClick={() => setIsMenuOpen(false)}>{t('header.faq')}</a>
-                    <button onClick={() => { toggleLanguage(); setIsMenuOpen(false); }} className="text-left text-dark hover:text-primary">
-                        <span className={language === 'pt' ? 'font-bold' : 'font-normal'}>PT</span>
-                        <span className="mx-1">|</span>
-                        <span className={language === 'en' ? 'font-bold' : 'font-normal'}>EN</span>
-                    </button>
-                </div>
-            )}
+
+                            <a href="/#contact" className="text-dark hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+                                {t('header.contact')}
+                            </a>
+                            <a href="/faq" className="text-dark hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+                                {t('header.faq')}
+                            </a>
+                        </nav>
+
+                        <div className="mt-auto pt-10">
+                            <div className="flex items-center space-x-4 border-t border-gray-100 pt-6">
+                                <button
+                                    onClick={() => { if (language !== 'pt') toggleLanguage(); setIsMenuOpen(false); }}
+                                    className={`text-lg transition-colors ${language === 'pt' ? 'font-bold text-primary' : 'text-gray-500 hover:text-dark'}`}
+                                >
+                                    PT
+                                </button>
+                                <span className="text-gray-300">|</span>
+                                <button
+                                    onClick={() => { if (language !== 'en') toggleLanguage(); setIsMenuOpen(false); }}
+                                    className={`text-lg transition-colors ${language === 'en' ? 'font-bold text-primary' : 'text-gray-500 hover:text-dark'}`}
+                                >
+                                    EN
+                                </button>
+                            </div>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </header>
     );
 };
