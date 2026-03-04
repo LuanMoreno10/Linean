@@ -16,7 +16,7 @@ const FundamentalsSection = () => {
                         <h3 className="text-3xl font-display font-bold text-gray-400">{t('fundamentals.transparency_title')}</h3>
                         <div className="flex justify-center h-48 items-center">
                             <img
-                                src="/transparenciapreto.png"
+                                src="/transparenciapreto.webp"
                                 alt="Transparência"
                                 className="h-full object-contain opacity-90 group-hover:scale-105 transition-transform duration-500"
                             />
@@ -31,7 +31,7 @@ const FundamentalsSection = () => {
                         <h3 className="text-3xl font-display font-bold text-gray-400">{t('fundamentals.rigor_title')}</h3>
                         <div className="flex justify-center h-48 items-center">
                             <img
-                                src="/rigorpreto.png"
+                                src="/rigorpreto.webp"
                                 alt="Rigor"
                                 className="h-full object-contain opacity-90 group-hover:scale-105 transition-transform duration-500"
                             />
@@ -46,7 +46,7 @@ const FundamentalsSection = () => {
                         <h3 className="text-3xl font-display font-bold text-gray-400">{t('fundamentals.results_title')}</h3>
                         <div className="flex justify-center h-48 items-center">
                             <img
-                                src="/resultadospreto.png"
+                                src="/resultadospreto.webp"
                                 alt="Resultados"
                                 className="h-full object-contain opacity-90 group-hover:scale-105 transition-transform duration-500"
                             />

@@ -16,7 +16,7 @@ const AboutSection = () => {
                         <div
                             className="absolute inset-0 bg-cover bg-center"
                             style={{
-                                backgroundImage: 'url("/imagem2.png")',
+                                backgroundImage: 'url("/imagem2.webp")',
                             }}
                         ></div>
                     </div>

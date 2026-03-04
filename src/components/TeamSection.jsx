@@ -21,7 +21,7 @@ const TeamSection = () => {
                         <div 
                             className="w-3/4 mx-auto aspect-[4/5] bg-gray-100 flex items-center justify-center text-center p-8 bg-cover bg-center bg-no-repeat" 
                             style={{
-                                backgroundImage: 'url("/breno 3.png")',
+                                backgroundImage: 'url("/breno-3.webp")',
                             }}>
                         </div>
                     </div>
