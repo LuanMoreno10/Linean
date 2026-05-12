@@ -82,6 +82,7 @@ const Header = () => {
 
                 {/* Mobile Menu Button */}
                 <button
+                    aria-label="Toggle Navigation"
                     className={`md:hidden relative z-50 ${isScrolled || !isHome || isMenuOpen ? 'text-dark' : 'text-white'}`}
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >

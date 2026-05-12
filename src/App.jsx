@@ -1,15 +1,17 @@
-import { useEffect } from 'react';
+import { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Lenis from 'lenis';
 import { LanguageProvider } from './context/LanguageContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import FAQ from './pages/FAQ';
-import Budget from './pages/Budget';
-import Construction from './pages/Construction';
-import Architecture from './pages/Architecture';
-import RealEstate from './pages/RealEstate';
+
+// Lazy loaded pages
+const Home = lazy(() => import('./pages/Home'));
+const FAQ = lazy(() => import('./pages/FAQ'));
+const Budget = lazy(() => import('./pages/Budget'));
+const Construction = lazy(() => import('./pages/Construction'));
+const Architecture = lazy(() => import('./pages/Architecture'));
+const RealEstate = lazy(() => import('./pages/RealEstate'));
 
 function App() {
   useEffect(() => {
@@ -42,14 +44,16 @@ function App() {
         <div className="flex flex-col min-h-screen font-sans text-dark bg-white">
           <Header />
           <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/budget" element={<Budget />} />
-              <Route path="/construtora" element={<Construction />} />
-              <Route path="/arquitetura" element={<Architecture />} />
-              <Route path="/mediacao-imobiliaria" element={<RealEstate />} />
-            </Routes>
+            <Suspense fallback={<div className="flex items-center justify-center min-h-screen"><div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div></div>}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/faq" element={<FAQ />} />
+                <Route path="/budget" element={<Budget />} />
+                <Route path="/construtora" element={<Construction />} />
+                <Route path="/arquitetura" element={<Architecture />} />
+                <Route path="/mediacao-imobiliaria" element={<RealEstate />} />
+              </Routes>
+            </Suspense>
           </main>
           <Footer />
         </div>
