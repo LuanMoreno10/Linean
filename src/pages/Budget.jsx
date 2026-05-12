@@ -1,16 +1,14 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import AnimatedSection from '../components/AnimatedSection';
-import emailjs from '@emailjs/browser';
 
 const Budget = () => {
     const { t } = useLanguage();
-    const form = useRef();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         phone: '',
-        service: 'construção',
+        service: 'Construção',
         message: ''
     });
     const [status, setStatus] = useState('idle'); // idle, submitting, success, error
@@ -23,34 +21,37 @@ const Budget = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('submitting');
 
-        // EmailJS integration
-        // 1. Create an account at https://www.emailjs.com/
-        // 2. Add an Email Service (e.g., Gmail) and get the Service ID
-        // 3. Create an Email Template and get the Template ID
-        // 4. Get your Public Key from Account -> API Keys
-        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+        const apiBase = import.meta.env.VITE_CONTACT_API_URL ?? '';
+        const url = `${apiBase.replace(/\/$/, '')}/api/send-budget`;
 
-        emailjs.sendForm(serviceId, templateId, form.current, publicKey)
-            .then((result) => {
-                console.log(result.text);
-                setStatus('success');
-                setFormData({
-                    name: '',
-                    email: '',
-                    phone: '',
-                    service: 'construction',
-                    message: ''
-                });
-            }, (error) => {
-                console.log(error.text);
-                setStatus('error');
+        try {
+            const res = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
             });
+            if (!res.ok) {
+                const data = await res.json().catch(() => ({}));
+                console.error(data.error || res.statusText);
+                setStatus('error');
+                return;
+            }
+            setStatus('success');
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                service: 'Construção',
+                message: '',
+            });
+        } catch (err) {
+            console.error(err);
+            setStatus('error');
+        }
     };
 
     return (
@@ -74,7 +75,7 @@ const Budget = () => {
                                 </h3>
                             </div>
                         ) : (
-                            <form ref={form} onSubmit={handleSubmit} className="space-y-6 bg-white p-8 md:p-12 shadow-sm border border-gray-100 rounded-sm">
+                            <form onSubmit={handleSubmit} className="space-y-6 bg-white p-8 md:p-12 shadow-sm border border-gray-100 rounded-sm">
                                 {status === 'error' && (
                                     <div className="bg-red-100 text-red-700 p-4 rounded-sm text-center mb-6">
                                         Ocorreu um erro ao enviar o pedido. Por favor, tente novamente.
