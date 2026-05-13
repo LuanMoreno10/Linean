@@ -3,6 +3,10 @@
         "header": {
             "about": "Quem somos",
             "group": "Grupo LINEAN",
+            "toggle_language": "Alternar idioma entre português e inglês",
+            "toggle_group_menu": "Expandir ou fechar o menu Grupo LINEAN",
+            "lang_pt": "Selecionar português",
+            "lang_en": "Selecionar inglês",
             "contact": "Contactos",
             "faq": "FAQ'S",
             "services": {
@@ -24,7 +28,8 @@
             "p4": "Trabalhamos sempre de forma justa e equilibrada, asseguramos que tanto a empresa como o cliente alcançam resultados satisfatórios e duradouros.",
             "p5": "Na LINEAN, cada investimento une segurança, qualidade e potencial de valorização, transformando património em valor real e construímos relações duradouras com cada parceiro.",
             "read_more": "Ler mais",
-            "read_less": "Ler menos"
+            "read_less": "Ler menos",
+            "image_alt": "Imagem institucional LINEAN"
         },
         "team": {
             "title": "Equipa LINEAN",
@@ -43,6 +48,8 @@
         },
         "testimonials": {
             "title": "o que dizem sobre a Linean",
+            "prev_aria": "Depoimentos anteriores",
+            "next_aria": "Próximos depoimentos",
             "role_owner": "Proprietário",
             "role_investor": "Investidor",
             "role_client": "Cliente",
@@ -125,6 +132,10 @@
         "header": {
             "about": "About us",
             "group": "LINEAN Group",
+            "toggle_language": "Switch language between Portuguese and English",
+            "toggle_group_menu": "Expand or collapse the LINEAN Group menu",
+            "lang_pt": "Select Portuguese",
+            "lang_en": "Select English",
             "contact": "Contact",
             "faq": "FAQ'S",
             "services": {
@@ -146,7 +157,8 @@
             "p4": "We always work fairly and balanced, ensuring that both the company and the client achieve satisfactory and lasting results.",
             "p5": "At LINEAN, every investment unites security, quality, and potential for appreciation, transforming heritage into real value and building lasting relationships with every partner.",
             "read_more": "Read more",
-            "read_less": "Read less"
+            "read_less": "Read less",
+            "image_alt": "LINEAN institutional image"
         },
         "team": {
             "title": "LINEAN Team",
@@ -165,6 +177,8 @@
         },
         "testimonials": {
             "title": "what they say about Linean",
+            "prev_aria": "Previous testimonials",
+            "next_aria": "Next testimonials",
             "role_owner": "Owner",
             "role_investor": "Investor",
             "role_client": "Client",

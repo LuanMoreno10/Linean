@@ -12,13 +12,15 @@ const AboutSection = () => {
                 {/* Image Side - Left */}
                 <div className="">
                     <div className="relative w-3/4 mx-auto aspect-square overflow-hidden">
-                        {/* Background Image */}
-                        <div
-                            className="absolute inset-0 bg-cover bg-center"
-                            style={{
-                                backgroundImage: 'url("/imagem2.webp")',
-                            }}
-                        ></div>
+                        <img
+                            src="/imagem2.webp"
+                            alt={t('about.image_alt')}
+                            width={1024}
+                            height={1024}
+                            className="absolute inset-0 h-full w-full object-cover"
+                            loading="lazy"
+                            decoding="async"
+                        />
                     </div>
                 </div>
 
@@ -53,8 +55,9 @@ const AboutSection = () => {
                     {/* Expand/Collapse Button - Only visible on mobile */}
                     <div className="flex justify-center md:hidden pt-8">
                         <button
+                            type="button"
                             onClick={() => setIsExpanded(!isExpanded)}
-                            className="flex items-center gap-3 px-8 py-4 bg-primary text-white text-xs font-bold uppercase tracking-widest shadow-xl hover:shadow-2xl hover:bg-primary-dark transition-all duration-300 transform hover:-translate-y-0.5"
+                            className="flex items-center gap-3 px-8 py-4 bg-primary-dark text-white text-xs font-bold uppercase tracking-widest shadow-xl hover:shadow-2xl hover:bg-primary-darker transition-all duration-300 transform hover:-translate-y-0.5"
                         >
                             <span>{isExpanded ? t('about.read_less') : t('about.read_more')}</span>
                             <ChevronDown

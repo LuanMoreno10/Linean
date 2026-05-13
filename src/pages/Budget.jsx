@@ -172,7 +172,7 @@ const Budget = () => {
                                     <button
                                         type="submit"
                                         disabled={status === 'submitting'}
-                                        className="w-full bg-primary hover:bg-primary-dark text-white font-bold uppercase tracking-widest py-4 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+                                        className="w-full bg-primary-dark hover:bg-primary-darker text-white font-bold uppercase tracking-widest py-4 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
                                     >
                                         {status === 'submitting' ? t('budget_page.form.submitting') : t('budget_page.form.submit')}
                                     </button>

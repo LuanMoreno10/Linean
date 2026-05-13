@@ -2,21 +2,25 @@ import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
-const FAQItem = ({ question, answer, isOpen, onToggle }) => {
+const FAQItem = ({ question, answer, isOpen, onToggle, panelId }) => {
     return (
         <div className="border-b border-gray-200 py-4 last:border-0">
             <button
+                type="button"
                 className="w-full flex justify-between items-center text-left focus:outline-none group"
                 onClick={onToggle}
+                aria-expanded={isOpen}
+                aria-controls={panelId}
             >
-                <span className="text-lg font-medium text-dark group-hover:text-primary transition-colors pr-4">
+                <span className="text-lg font-medium text-dark group-hover:text-primary-dark transition-colors pr-4">
                     {question}
                 </span>
-                <span className="text-gray-400">
+                <span className="text-gray-400" aria-hidden>
                     {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                 </span>
             </button>
             <div
+                id={panelId}
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'
                     }`}
             >
@@ -89,6 +93,7 @@ const FAQ = () => {
                             answer={faq.answer}
                             isOpen={openIndex === index}
                             onToggle={() => handleToggle(index)}
+                            panelId={`faq-panel-${index}`}
                         />
                     ))}
                 </div>

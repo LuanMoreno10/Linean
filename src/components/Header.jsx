@@ -36,7 +36,7 @@ const Header = () => {
     const headerClass = `fixed w-full z-50 transition-all duration-300 ${isScrolled || !isHome || isMenuOpen ? 'bg-white shadow-sm py-4' : 'bg-transparent py-6'
         }`;
 
-    const linkClass = `text-sm font-medium transition-colors hover:text-primary ${isScrolled || !isHome || isMenuOpen ? 'text-dark' : 'text-white'
+    const linkClass = `text-sm font-medium transition-colors ${isScrolled || !isHome || isMenuOpen ? 'text-dark hover:text-primary-dark' : 'text-white hover:text-gray-200'
         }`;
 
     return (
@@ -52,20 +52,24 @@ const Header = () => {
 
                     {/* Grupo LINEAN Dropdown */}
                     <div className="relative group">
-                        <button className={`${linkClass} flex items-center space-x-1 outline-none`}>
+                        <button
+                            type="button"
+                            className={`${linkClass} flex items-center space-x-1 outline-none`}
+                            aria-haspopup="true"
+                        >
                             <span>{t('header.group')}</span>
-                            <ChevronDown size={14} />
+                            <ChevronDown size={14} aria-hidden />
                         </button>
 
                         {/* Dropdown Menu */}
                         <div className="absolute top-full left-0 mt-2 w-64 bg-white shadow-lg rounded-sm py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 text-left border-t-2 border-primary">
-                            <Link to="/construtora" className="block px-6 py-3 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors">
+                            <Link to="/construtora" className="block px-6 py-3 text-sm text-gray-600 hover:text-primary-dark hover:bg-gray-50 transition-colors">
                                 {t('header.services.construction')}
                             </Link>
-                            <Link to="/arquitetura" className="block px-6 py-3 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors">
+                            <Link to="/arquitetura" className="block px-6 py-3 text-sm text-gray-600 hover:text-primary-dark hover:bg-gray-50 transition-colors">
                                 {t('header.services.architecture')}
                             </Link>
-                            <Link to="/mediacao-imobiliaria" className="block px-6 py-3 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors">
+                            <Link to="/mediacao-imobiliaria" className="block px-6 py-3 text-sm text-gray-600 hover:text-primary-dark hover:bg-gray-50 transition-colors">
                                 {t('header.services.realestate')}
                             </Link>
                         </div>
@@ -73,7 +77,7 @@ const Header = () => {
 
                     <a href="/#contact" className={linkClass}>{t('header.contact')}</a>
                     <a href="/faq" className={linkClass}>{t('header.faq')}</a>
-                    <button onClick={toggleLanguage} className={linkClass}>
+                    <button type="button" onClick={toggleLanguage} className={linkClass} aria-label={t('header.toggle_language')}>
                         <span className={language === 'pt' ? 'font-bold' : 'font-normal'}>PT</span>
                         <span className="mx-1">|</span>
                         <span className={language === 'en' ? 'font-bold' : 'font-normal'}>EN</span>
@@ -82,6 +86,7 @@ const Header = () => {
 
                 {/* Mobile Menu Button */}
                 <button
+                    type="button"
                     aria-label="Toggle Navigation"
                     className={`md:hidden relative z-50 ${isScrolled || !isHome || isMenuOpen ? 'text-dark' : 'text-white'}`}
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -101,21 +106,24 @@ const Header = () => {
                         className="md:hidden fixed inset-0 top-0 left-0 w-full h-[100dvh] bg-white z-40 pt-28 px-6 flex flex-col overflow-y-auto pb-8"
                     >
                         <nav className="flex flex-col space-y-6 text-2xl font-medium mt-4">
-                            <a href="/#about" className="text-dark hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+                            <a href="/#about" className="text-dark hover:text-primary-dark transition-colors" onClick={() => setIsMenuOpen(false)}>
                                 {t('header.about')}
                             </a>
 
                             <div className="flex flex-col space-y-4">
                                 <button
-                                    className="flex items-center justify-between w-full text-dark hover:text-primary transition-colors text-left"
+                                    type="button"
+                                    className="flex items-center justify-between w-full text-dark hover:text-primary-dark transition-colors text-left"
                                     onClick={() => setIsMobileSubmenuOpen(!isMobileSubmenuOpen)}
+                                    aria-expanded={isMobileSubmenuOpen}
+                                    aria-label={t('header.toggle_group_menu')}
                                 >
                                     <span>{t('header.group')}</span>
                                     <motion.div
                                         animate={{ rotate: isMobileSubmenuOpen ? 180 : 0 }}
                                         transition={{ duration: 0.3 }}
                                     >
-                                        <ChevronDown size={24} />
+                                        <ChevronDown size={24} aria-hidden />
                                     </motion.div>
                                 </button>
 
@@ -128,13 +136,13 @@ const Header = () => {
                                             className="overflow-hidden"
                                         >
                                             <div className="pl-4 border-l-2 border-primary/20 flex flex-col space-y-4 py-2 mt-2">
-                                                <Link to="/construtora" className="text-xl text-gray-600 hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+                                                <Link to="/construtora" className="text-xl text-gray-600 hover:text-primary-dark transition-colors" onClick={() => setIsMenuOpen(false)}>
                                                     {t('header.services.construction')}
                                                 </Link>
-                                                <Link to="/arquitetura" className="text-xl text-gray-600 hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+                                                <Link to="/arquitetura" className="text-xl text-gray-600 hover:text-primary-dark transition-colors" onClick={() => setIsMenuOpen(false)}>
                                                     {t('header.services.architecture')}
                                                 </Link>
-                                                <Link to="/mediacao-imobiliaria" className="text-xl text-gray-600 hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+                                                <Link to="/mediacao-imobiliaria" className="text-xl text-gray-600 hover:text-primary-dark transition-colors" onClick={() => setIsMenuOpen(false)}>
                                                     {t('header.services.realestate')}
                                                 </Link>
                                             </div>
@@ -143,10 +151,10 @@ const Header = () => {
                                 </AnimatePresence>
                             </div>
 
-                            <a href="/#contact" className="text-dark hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+                            <a href="/#contact" className="text-dark hover:text-primary-dark transition-colors" onClick={() => setIsMenuOpen(false)}>
                                 {t('header.contact')}
                             </a>
-                            <a href="/faq" className="text-dark hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+                            <a href="/faq" className="text-dark hover:text-primary-dark transition-colors" onClick={() => setIsMenuOpen(false)}>
                                 {t('header.faq')}
                             </a>
                         </nav>
@@ -154,15 +162,19 @@ const Header = () => {
                         <div className="mt-auto pt-10">
                             <div className="flex items-center space-x-4 border-t border-gray-100 pt-6">
                                 <button
+                                    type="button"
                                     onClick={() => { if (language !== 'pt') toggleLanguage(); setIsMenuOpen(false); }}
-                                    className={`text-lg transition-colors ${language === 'pt' ? 'font-bold text-primary' : 'text-gray-500 hover:text-dark'}`}
+                                    className={`text-lg transition-colors ${language === 'pt' ? 'font-bold text-primary-dark' : 'text-gray-500 hover:text-dark'}`}
+                                    aria-label={t('header.lang_pt')}
                                 >
                                     PT
                                 </button>
-                                <span className="text-gray-300">|</span>
+                                <span className="text-gray-300" aria-hidden>|</span>
                                 <button
+                                    type="button"
                                     onClick={() => { if (language !== 'en') toggleLanguage(); setIsMenuOpen(false); }}
-                                    className={`text-lg transition-colors ${language === 'en' ? 'font-bold text-primary' : 'text-gray-500 hover:text-dark'}`}
+                                    className={`text-lg transition-colors ${language === 'en' ? 'font-bold text-primary-dark' : 'text-gray-500 hover:text-dark'}`}
+                                    aria-label={t('header.lang_en')}
                                 >
                                     EN
                                 </button>

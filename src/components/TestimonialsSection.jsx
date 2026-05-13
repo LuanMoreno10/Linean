@@ -60,16 +60,20 @@ const TestimonialsSection = () => {
                     <h2 className="text-xl text-dark">{t('testimonials.title')}</h2>
                     <div className="flex space-x-2">
                         <button
+                            type="button"
                             onClick={prevSlide}
+                            aria-label={t('testimonials.prev_aria')}
                             className="w-8 h-8 rounded-full bg-gray-200 text-gray-900 flex items-center justify-center hover:bg-gray-300 transition-colors"
                         >
-                            <ChevronLeft size={16} />
+                            <ChevronLeft size={16} aria-hidden />
                         </button>
                         <button
+                            type="button"
                             onClick={nextSlide}
+                            aria-label={t('testimonials.next_aria')}
                             className="w-8 h-8 rounded-full bg-gray-200 text-gray-900 flex items-center justify-center hover:bg-gray-300 transition-colors"
                         >
-                            <ChevronRight size={16} />
+                            <ChevronRight size={16} aria-hidden />
                         </button>
                     </div>
                 </div>
@@ -80,7 +84,7 @@ const TestimonialsSection = () => {
                             <p className="text-gray-600 italic">"{testimonial.text}"</p>
                             <div>
                                 <p className="font-bold text-dark">{testimonial.name}</p>
-                                <p className="text-sm text-gray-400">{testimonial.role}</p>
+                                <p className="text-sm text-gray-600">{testimonial.role}</p>
                             </div>
                         </div>
                     ))}
